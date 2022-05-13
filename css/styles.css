@@ -10,6 +10,23 @@
   --bg-dark-color: #2f303a;
   --bg-accent-color: #2196f3;
   --bg-accent-btn-color: #188ce8;
+  --border-header-color: #ececec;
+  --border-card-color: #eeeeee;
+  --main-gap: 30px;
+}
+/*--------------GENERAL------------*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
 }
 body {
   background-color: var(--bg-main-color);
@@ -18,6 +35,21 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .link {
   color: var(--text-main-color);
@@ -45,7 +77,16 @@ body {
   cursor: pointer;
 }
 /*--------------HEADER------------*/
+.header {
+  border-bottom: 1px solid var(--border-header-color);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
 .header-logo {
+  margin-right: 93px;
+  display: block;
   color: var(--text-accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -56,14 +97,30 @@ body {
 .logo-top {
   color: var(--text-dark-color);
 }
-.current {
-  color: var(--text-accent-color);
+.header-list {
+  display: flex;
+}
+.header-list .header-item:not(:last-child) {
+  margin-right: 50px;
 }
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.current {
+  color: var(--text-accent-color);
+}
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+.header-contacts .header-item:first-child {
+  margin-right: 50px;
 }
 .header-contacts .header-link {
   color: var(--text-secondary-color);
@@ -74,6 +131,8 @@ body {
 }
 /*--------------HERO------------*/
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--bg-dark-color);
 }
 .hero-title {
@@ -84,23 +143,48 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: var(--main-gap);
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-button {
+  border-color: var(--bg-accent-color);
   background-color: var(--bg-accent-color);
   color: var(--text-light-color);
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  display: block;
+  height: 50px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .hero-button:hover,
 .hero-button:focus {
+  border-color: var(--bg-accent-btn-color);
   background-color: var(--bg-accent-btn-color);
 }
 /*--------------ADVANTAGES------------*/
+.advantages.section {
+  padding-bottom: 0;
+}
+.advantages-list {
+  display: flex;
+  margin-right: calc(-1 * var(--main-gap));
+}
+.advantages-item {
+  flex-basis: calc(100% / 4 - var(--main-gap));
+  margin-right: var(--main-gap);
+}
 .advantages-item-title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .advantages-item-text {
   color: var(--text-secondary-color);
@@ -110,6 +194,13 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
+}
+.activity-list {
+  display: flex;
+}
+.activity-item:not(:last-child) {
+  margin-right: var(--main-gap);
 }
 /*--------------COMMAND------------*/
 .command {
@@ -119,22 +210,51 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
+}
+.command-list {
+  display: flex;
+  margin-right: calc(-1 * var(--main-gap));
+}
+.command-item {
+  flex-basis: calc(100% / 4 - var(--main-gap));
+  margin-right: var(--main-gap);
+  background-color: var(--bg-main-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.command-card-content {
+  padding: var(--main-gap);
 }
 .command-item-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
+  margin-bottom: 10px;
 }
 .command-item-text {
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
   color: var(--text-secondary-color);
 }
-/*--------------EXAMPLES------------*/
+/*--------------PORTFOLIO-EXAMPLES------------*/
+.examples-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.examples-item:not(:last-child) {
+  margin-right: 8px;
+}
 .examples-button {
-  background: var(--bg-light-color);
+  padding: 6px 22px;
+  display: block;
+  border-radius: 4px;
+  border-color: var(--bg-light-color);
+  background-color: var(--bg-light-color);
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.03em;
@@ -148,27 +268,49 @@ body {
   background-color: var(--bg-accent-color);
   color: var(--text-light-color);
 }
+.samples-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--main-gap));
+  margin-bottom: calc(-1 * var(--main-gap));
+}
+.samples-item {
+  flex-basis: calc(100% / 3 - var(--main-gap));
+  margin-right: var(--main-gap);
+  margin-bottom: var(--main-gap);
+}
+.samples-card-content {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-card-color);
+  border-bottom: 1px solid var(--border-card-color);
+  border-left: 1px solid var(--border-card-color);
+}
 .samples-item-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 .samples-item-text {
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.88;
   color: var(--text-secondary-color);
 }
 /*--------------FOOTER------------*/
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bg-dark-color);
 }
 .footer-logo {
+  display: block;
   color: var(--text-accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
 }
 .logo-bottom {
   color: var(--text-light-color);
@@ -178,6 +320,9 @@ body {
 }
 .footer-text {
   color: var(--text-light-color);
+}
+.footer-item {
+  margin-top: 9px;
 }
 .footer-link {
   color: var(--text-light-transparent-color);
