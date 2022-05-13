@@ -86,6 +86,8 @@ body {
 }
 .header-logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: block;
   color: var(--text-accent-color);
   font-family: 'Raleway', sans-serif;
@@ -160,7 +162,6 @@ body {
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 .hero-button:hover,
@@ -169,9 +170,6 @@ body {
   background-color: var(--bg-accent-btn-color);
 }
 /*--------------ADVANTAGES------------*/
-.advantages.section {
-  padding-bottom: 0;
-}
 .advantages-list {
   display: flex;
   margin-right: calc(-1 * var(--main-gap));
@@ -190,6 +188,9 @@ body {
   color: var(--text-secondary-color);
 }
 /*--------------ACTIVITY------------*/
+.activity.section {
+  padding-top: 0;
+}
 .activity-title {
   font-size: 36px;
   line-height: 1.17;
@@ -220,8 +221,6 @@ body {
   flex-basis: calc(100% / 4 - var(--main-gap));
   margin-right: var(--main-gap);
   background-color: var(--bg-main-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .command-card-content {
@@ -260,6 +259,7 @@ body {
   letter-spacing: 0.03em;
 }
 .current-btn {
+  border-color: var(--bg-accent-color);
   background-color: var(--bg-accent-color);
   color: var(--text-light-color);
 }
@@ -320,9 +320,10 @@ body {
 }
 .footer-text {
   color: var(--text-light-color);
+  margin-bottom: 9px;
 }
-.footer-item {
-  margin-top: 9px;
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .footer-link {
   color: var(--text-light-transparent-color);
